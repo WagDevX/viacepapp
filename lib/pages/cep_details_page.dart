@@ -69,31 +69,37 @@ class _CepDetailsPageState extends State<CepDetailsPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextField(
+                      decoration: const InputDecoration(helperText: "CEP"),
                       controller: cepController,
                       style: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                     TextField(
+                      decoration: const InputDecoration(helperText: "Rua"),
                       controller: ruaController,
                       style: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                     TextField(
+                      decoration: const InputDecoration(helperText: "Bairro"),
                       controller: bairroController,
                       style: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                     TextField(
+                      decoration: const InputDecoration(helperText: "Cidade"),
                       controller: cidadeController,
                       style: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                     TextField(
+                      decoration: const InputDecoration(helperText: "Estado"),
                       controller: estadoController,
                       style: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.w500),
                     ),
                     TextField(
+                      decoration: const InputDecoration(helperText: "DDD"),
                       controller: dddController,
                       style: const TextStyle(
                           fontSize: 20, fontWeight: FontWeight.w500),
@@ -141,10 +147,10 @@ class _CepDetailsPageState extends State<CepDetailsPage> {
                             child: const Text("Salvar alterações")))
                   ]),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 10),
             const Icon(
               Icons.location_on_outlined,
-              size: 150,
+              size: 50,
             )
           ],
         ),
