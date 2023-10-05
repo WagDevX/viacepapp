@@ -18,6 +18,16 @@ class Back4AppRepository {
     }
   }
 
+  Future<void> changeCepData(
+      ConsultaCepModel consultaCepModel, String id) async {
+    try {
+      await back4AppCustomDio.dio
+          .put("/Viacep/$id", data: consultaCepModel.toJson());
+    } catch (e) {
+      rethrow;
+    }
+  }
+
   Future<void> deleteCepFromBack4app(String objectId) async {
     try {
       await back4AppCustomDio.dio.delete("/Viacep/$objectId");

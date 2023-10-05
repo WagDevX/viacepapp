@@ -19,8 +19,8 @@ class ViaCepRepository {
       }
     } catch (e) {
       if (bc.mounted) {
-        showSnackBar(bc,
-            "Houve um erro ao consultar! Verifique os dados e tente novamente!");
+        showSnackBar(
+            bc, "Cep não encontrado! Verifique os dados e tente novamente!");
       }
       return ConsultaCepModel.vazio();
     }

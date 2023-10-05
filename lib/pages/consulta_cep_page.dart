@@ -174,13 +174,16 @@ class _ConsultaCepPageState extends State<ConsultaCepPage> {
                       },
                       child: ListTile(
                         leading: const Icon(Icons.location_on),
-                        onTap: () {
-                          Navigator.push(
+                        onTap: () async {
+                          var result = await Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => CepDetailsPage(
                                       consultaCepModel: cepQueryHistory,
                                       index: index)));
+                          if (result != null) {
+                            loadData();
+                          }
                         },
                         title: Text(query!.cep ?? ""),
                         subtitle: Text(query.logradouro ?? ""),
